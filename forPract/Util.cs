@@ -11,7 +11,6 @@ namespace forPract
             T temp = a;
             a = b;
             b = temp;
-
         }
 
         static int min(int a, int b)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+
 namespace forPract
 {
     class IntCompotatorLess : IComparer
@@ -22,12 +23,12 @@ namespace forPract
         
         static void Main(string[] args)
         {
-            int a = 4;
+            /*int a = 4;
             int b = 3;
             int c = 2;
-            int d = 5;
+            int d = 5;*/
 
-            Tasks.prinNumbers(456);
+            /*Tasks.prinNumbers(456);
             Console.WriteLine(a + " " + b);
             Util.Swap(ref a, ref b);
             Console.WriteLine(a + " " + b);
@@ -35,7 +36,30 @@ namespace forPract
             Console.WriteLine(a + " " + b + " " + c);
             Console.WriteLine(Tasks.allDifferent(new int[] { 1, 2, 3 }));
             Console.WriteLine(Tasks.countEqualElements(1265));
-            Console.ReadKey();
+            Console.ReadKey();*/
+
+
+            int[] temp = new int[] { 4, 4, 8, 9, 9, 9, 7};
+            int[] temp2 = new int[] { 1, 1, 2, 2, 3};
+            /*ArrayList array = Tasks2.findEl(temp);
+            foreach(var el in array)
+            {
+                Console.WriteLine(el);
+            }
+            
+            int[] arr = Tasks2.findFiveGreat(temp);
+            foreach (var el in arr)
+            {
+                Console.WriteLine(el);
+            }*/
+
+            ArrayList res = Tasks2.copyArr(temp, temp2);
+            foreach(var el in res)
+            {
+                Console.WriteLine(el);
+            }
+            
+
         }
     }
 }
