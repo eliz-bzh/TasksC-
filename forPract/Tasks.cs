@@ -17,13 +17,13 @@ namespace forPract
             k = temp[3];
         }
 
-        int reverseNumber(int a)
+        public static int reverseNumber(int a)
         {
             int temp = 0;
-            for(; a != 0; a/=10)
+            for(; a != 0; a /= 10)
             {
-                temp = temp * 10;
-                temp = temp + a % 10;
+                temp *= 10;
+                temp += a % 10;
             }
             return temp;
         }
@@ -33,7 +33,7 @@ namespace forPract
             return reverseNumber(a) == a;
         }
 
-        int beforeLastNum(int a, int n)
+        public static int beforeLastNum(int a, int n)
         {
             return (int)(a / Math.Pow(10, n)) % 10;
         }
@@ -60,6 +60,7 @@ namespace forPract
             }
             return true;
         }
+
         public static int sumOfDigit(int a)
         {
             int temp = 0;
@@ -80,9 +81,9 @@ namespace forPract
         }
         public static bool allDifferentt(int a)
         {
-            for(int i = a; a != 0; i = i / 10)
+            for(int i = a; a != 0; i /= 10)
             {
-                for(int j = i / 10; j != 0; j = j / 10)
+                for(int j = i / 10; j != 0; j /= 10)
                 {
                     if(i % 10 == j % 10)
                     {
@@ -112,6 +113,60 @@ namespace forPract
         {
             return countEqualElements(a) == n;
         }
-        
+
+        public static int SumLast(int number, int k)
+        {
+            int sum = 0;
+            for(int i = 0; i != k; ++i, number /= 10)
+            {
+                sum += number % 10;
+            }
+            return sum;
+        }
+        public static int CountEqualLast(int number, int k, int n)
+        {
+            int sum = 0;
+            for (int i = 0; i != k; ++i, number /= 10)
+            {
+                if (number % 10 == n)
+                    ++sum;
+            }
+            return sum;
+        }
+
+        public static int KDigit(double number, int k)
+        {
+            string numbe = number.ToString();
+            int numbertran = Convert.ToInt32(numbe.Substring(numbe.IndexOf(",") + 1));
+            numbertran = reverseNumber(numbertran);
+            int count = CountEqualLast(numbertran, k, 9);
+            return count;
+        }
+
+        public static int CountK(double number, int k)
+        {
+            string numbe = number.ToString();
+            int numbertran = Convert.ToInt32(numbe.Substring(numbe.IndexOf(",") + 1));
+            numbertran = reverseNumber(numbertran);
+            int count = SumLast(numbertran, k);
+            return count;
+        }
+
+        public static int Transposition(double number)
+        {
+            string numbe = number.ToString();
+            int numbertran = Convert.ToInt32(numbe.Substring(numbe.IndexOf(",") + 1));
+            numbertran = reverseNumber(numbertran);
+            return numbertran;
+        }
+
+
+        public static bool SumsEqual(double number, int k, int n)
+        {
+            int sumK = CountK(number, k);
+            int number1 = Convert.ToInt32(Math.Floor(Transposition(number) / Math.Pow(10, k)));
+            int sumN = SumLast(number1, n);
+            return sumK == sumN;
+        }
     }
 }

@@ -37,7 +37,10 @@ namespace forPract
             Console.WriteLine(Tasks.allDifferent(new int[] { 1, 2, 3 }));
             Console.WriteLine(Tasks.countEqualElements(1265));
             Console.ReadKey();*/
-
+            //Console.WriteLine(Tasks.CountK(0.989839, 3));
+            Console.WriteLine(Tasks.Transposition(0.4565));
+            Console.WriteLine(Tasks.SumsEqual(0.45351343, 2, 3));
+            Console.ReadKey();
 
             int[] temp = new int[] { 4, 4, 8, 9, 9, 9, 7};
             int[] temp2 = new int[] { 1, 1, 2, 2, 3};
@@ -51,13 +54,13 @@ namespace forPract
             foreach (var el in arr)
             {
                 Console.WriteLine(el);
-            }*/
+            }
 
             ArrayList res = Tasks2.copyArr(temp, temp2);
             foreach(var el in res)
             {
                 Console.WriteLine(el);
-            }
+            }*/
             
 
         }
