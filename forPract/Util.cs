@@ -40,5 +40,9 @@ namespace forPract
             return max(max(a, b), c);
         }
 
+        public static bool is_pow_2(int n)
+        {
+            return (n & (n - 1)) == 0;
+        }
     }
 }

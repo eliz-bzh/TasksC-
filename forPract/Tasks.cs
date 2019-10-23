@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
+using System.Linq;
 
 namespace forPract
 {
@@ -28,7 +29,7 @@ namespace forPract
             return temp;
         }
 
-        bool isPalindrom(int a)
+        public static bool isPalindrom(int a)
         {
             return reverseNumber(a) == a;
         }
@@ -168,5 +169,54 @@ namespace forPract
             int sumN = SumLast(number1, n);
             return sumK == sumN;
         }
+
+        public static int[] DeleteDublicateElement(int[] array)
+        {
+            return array.Distinct().ToArray();
+        }
+
+        public static void PrintArray(int[] array)
+        {
+            array = DeleteDublicateElement(array);
+            foreach(int i in array)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        /*public static List<int> DeleteElement(List<List<int>> array)
+        {
+            foreach(var item in array)
+            {
+                item.Sort();
+                item.Where((i) => { int c = item.Count(el => el == i); return c == 1; });
+            }
+        }*/
+
+        public static void isPalindromPow(int number, int mun)
+        { 
+            for(; number != mun; ++number)
+            {
+                if (isPalindrom(number) && isPalindrom((int)Math.Pow(number, 2)))
+                    Console.WriteLine(number);
+            }
+        }
+        //1 2 3 2 4 2
+
+        public static List<int> DeleteElem(int [] arr)
+        {
+            List<int> res = new List<int>();
+            foreach(int item in arr)
+            {
+                if(arr.Count(i => i == item) == 1)
+                {
+                    res.Add(item);
+                    Console.WriteLine(item);
+                }
+            }
+            return res;
+        }
+
+        
     }
 }

@@ -36,14 +36,23 @@ namespace forPract
             Console.WriteLine(a + " " + b + " " + c);
             Console.WriteLine(Tasks.allDifferent(new int[] { 1, 2, 3 }));
             Console.WriteLine(Tasks.countEqualElements(1265));
-            Console.ReadKey();*/
+            Console.ReadKey();
             //Console.WriteLine(Tasks.CountK(0.989839, 3));
+            int[] temp = new int[] { 4, 4, 8, 9, 9, 9, 7 };
+            int[] temp2 = new int[] { 1, 1, 2, 2, 3 };
             Console.WriteLine(Tasks.Transposition(0.4565));
             Console.WriteLine(Tasks.SumsEqual(0.45351343, 2, 3));
+            Tasks.PrintArray(temp);
+            Console.WriteLine(Util.is_pow_2(8));*/
+            int[] arr = { 1, 2, 3, 2, 4, 2 };
+            //Console.WriteLine(Tasks.DeleteElem(arr));
+            Console.WriteLine(Bit.pow(8));
+            Bit.f(9);
+            Console.WriteLine(Bit.invert(5));
+            //Tasks.isPalindromPow(11, 23);
             Console.ReadKey();
 
-            int[] temp = new int[] { 4, 4, 8, 9, 9, 9, 7};
-            int[] temp2 = new int[] { 1, 1, 2, 2, 3};
+            
             /*ArrayList array = Tasks2.findEl(temp);
             foreach(var el in array)
             {
