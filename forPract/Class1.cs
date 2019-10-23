@@ -65,7 +65,5 @@ namespace forPract
             }
             return counter;
         }
-
-        
     }
 }

@@ -44,5 +44,6 @@ namespace forPract
         {
             return (n & (n - 1)) == 0;
         }
+
     }
 }

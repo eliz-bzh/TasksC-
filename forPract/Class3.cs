@@ -10,5 +10,7 @@ namespace forPract
         {
             return y - x;
         }
+
+
     }
 }
