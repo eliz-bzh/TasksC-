@@ -40,5 +40,19 @@ namespace forPract
         {
             return number ^ 2;
         }
+
+        public static bool Positive(int number)
+        {
+            int temp = 0;
+            for(; number != 0; ++temp)
+            {
+                number = number >> 1;
+            }
+            if(temp == 32)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

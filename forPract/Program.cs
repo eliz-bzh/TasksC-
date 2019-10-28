@@ -46,9 +46,10 @@ namespace forPract
             Console.WriteLine(Util.is_pow_2(8));*/
             int[] arr = { 1, 2, 3, 2, 4, 2 };
             //Console.WriteLine(Tasks.DeleteElem(arr));
-            Console.WriteLine(Bit.pow(8));
+            /*Console.WriteLine(Bit.pow(8));
             Bit.f(9);
-            Console.WriteLine(Bit.invert(5));
+            Console.WriteLine(Bit.invert(5));*/
+            Console.WriteLine(Bit.Positive((-13)));
             //Tasks.isPalindromPow(11, 23);
             Console.ReadKey();
 
